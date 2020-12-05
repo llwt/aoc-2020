@@ -1,8 +1,8 @@
+use aoc_2020::read_aoc_input;
 use std::collections::HashSet;
-use std::fs;
 
 fn main() {
-    let input = fs::read_to_string("input.txt").expect("failed to read input file");
+    let input = read_aoc_input("day1-1");
     let numbers: HashSet<i32> = input.lines().map(|l| l.parse::<i32>().unwrap()).collect();
     let valid_number = numbers
         .iter()

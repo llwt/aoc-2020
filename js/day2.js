@@ -1,6 +1,7 @@
-const { match } = require("assert");
-const fs = require("fs");
-const input = fs.readFileSync("./input.txt", "utf-8").trim();
+import { readInput } from "./lib.js";
+
+const input = readInput("day2-1");
+
 const passwords = input.split("\n").map((l) => {
   const [range, letter, pass] = l.split(" ");
   const [min, max] = range.split("-").map(Number);

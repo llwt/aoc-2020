@@ -1,6 +1,6 @@
-const fs = require("fs");
-const input = fs.readFileSync("./input.txt", "utf-8").trim();
+import { readInput } from "./lib.js";
 
+const input = readInput("day1-1");
 const map = input.split("\n").map((row) => row.split(""));
 
 const countTrees = (right, down) => {
